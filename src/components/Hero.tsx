@@ -1,6 +1,6 @@
 import { MouseEvent } from 'react';
 import { motion } from 'motion/react';
-import { MessageSquare, ArrowRight, Download, CheckCircle2, Award, Zap } from 'lucide-react';
+import { MessageSquare, ArrowRight, Download, CheckCircle2, Award, Zap, Linkedin } from 'lucide-react';
 import { personalInfo } from '../data';
 import SafeImage from './SafeImage';
 
@@ -77,21 +77,31 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.25 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12"
+              className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center lg:justify-start mb-12"
             >
               <a
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-[0_4px_20px_rgba(34,197,94,0.3)] hover:shadow-[0_4px_30px_rgba(34,197,94,0.5)] transform hover:-translate-y-1 transition-all duration-300 group"
+                className="flex items-center justify-center gap-3 px-6 py-4 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-[0_4px_20px_rgba(34,197,94,0.3)] hover:shadow-[0_4px_30px_rgba(34,197,94,0.5)] transform hover:-translate-y-1 transition-all duration-300 group"
               >
                 <MessageSquare size={18} className="transition-transform group-hover:scale-110" />
                 <span>Let's Discuss on WhatsApp</span>
               </a>
 
+              <a
+                href={personalInfo.linkedinUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-3 px-6 py-4 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-[0_4px_20px_rgba(37,99,235,0.3)] hover:shadow-[0_4px_30px_rgba(37,99,235,0.5)] transform hover:-translate-y-1 transition-all duration-300 group"
+              >
+                <Linkedin size={18} className="transition-transform group-hover:scale-110" />
+                <span>Connect on LinkedIn</span>
+              </a>
+
               <button
                 onClick={handleScrollToProjects}
-                className="flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-sm font-semibold text-white bg-slate-900 border border-slate-700 hover:border-purple-500 hover:bg-slate-900/50 transform hover:-translate-y-1 transition-all duration-300 group"
+                className="flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm font-semibold text-white bg-slate-900 border border-slate-700 hover:border-purple-500 hover:bg-slate-900/50 transform hover:-translate-y-1 transition-all duration-300 group"
               >
                 <span>Explore Work</span>
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
