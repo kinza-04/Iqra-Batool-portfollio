@@ -4,6 +4,7 @@ export interface Project {
   description: string;
   category: 'WordPress' | 'Front-End' | 'SEO & Performance' | 'E-Commerce';
   image: string;
+  fallbackImage?: string;
   tags: string[];
   features: string[];
   demoUrl?: string;

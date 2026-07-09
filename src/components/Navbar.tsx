@@ -2,6 +2,7 @@ import { useState, useEffect, MouseEvent } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, MessageSquare, Award } from 'lucide-react';
 import { personalInfo } from '../data';
+import SafeImage from './SafeImage';
 
 interface NavbarProps {
   activeSection: string;
@@ -63,10 +64,10 @@ export default function Navbar({ activeSection }: NavbarProps) {
             className="flex items-center gap-3 group"
           >
             <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-purple-500/80 group-hover:border-pink-500 transition-colors shadow-[0_0_15px_rgba(168,85,247,0.3)] duration-300">
-              <img
+              <SafeImage
                 src={personalInfo.avatarUrl}
+                fallbackSrc={personalInfo.fallbackAvatarUrl}
                 alt={personalInfo.name}
-                referrerPolicy="no-referrer"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-purple-600/20 to-pink-500/0 group-hover:opacity-0 transition-opacity" />

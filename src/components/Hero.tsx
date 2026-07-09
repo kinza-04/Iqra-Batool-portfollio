@@ -2,6 +2,7 @@ import { MouseEvent } from 'react';
 import { motion } from 'motion/react';
 import { MessageSquare, ArrowRight, Download, CheckCircle2, Award, Zap } from 'lucide-react';
 import { personalInfo } from '../data';
+import SafeImage from './SafeImage';
 
 export default function Hero() {
   const handleScrollToProjects = (e: MouseEvent<HTMLButtonElement>) => {
@@ -183,10 +184,10 @@ export default function Hero() {
                 transition={{ type: 'spring', stiffness: 100, damping: 15, delay: 0.2 }}
                 className="absolute inset-8 rounded-full overflow-hidden border-4 border-slate-800 shadow-[0_0_50px_rgba(168,85,247,0.2)] bg-slate-900 group"
               >
-                <img
+                <SafeImage
                   src={personalInfo.avatarUrl}
+                  fallbackSrc={personalInfo.fallbackAvatarUrl}
                   alt={personalInfo.name}
-                  referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
                 

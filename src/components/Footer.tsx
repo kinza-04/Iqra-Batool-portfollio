@@ -1,6 +1,7 @@
 import { MouseEvent } from 'react';
 import { personalInfo } from '../data';
 import { Mail, MessageSquare, Linkedin, Globe } from 'lucide-react';
+import SafeImage from './SafeImage';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -31,10 +32,10 @@ export default function Footer() {
           {/* Logo Brand area */}
           <div className="flex items-center gap-3">
             <div className="relative w-8 h-8 rounded-full overflow-hidden border border-purple-500/50">
-              <img
+              <SafeImage
                 src={personalInfo.avatarUrl}
+                fallbackSrc={personalInfo.fallbackAvatarUrl}
                 alt={personalInfo.name}
-                referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"
               />
             </div>

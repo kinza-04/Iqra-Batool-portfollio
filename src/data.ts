@@ -10,6 +10,7 @@ export const personalInfo = {
   whatsappUrl: 'https://wa.me/923226013425',
   linkedinUrl: 'https://www.linkedin.com/in/iqra-batool33/',
   avatarUrl: '/src/assets/images/iqra_realistic_photo_1783580217182.jpg',
+  fallbackAvatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400&h=400',
   location: 'Sargodha, Pakistan',
   experienceYears: '3+',
   completedProjects: '50+',
@@ -97,6 +98,7 @@ export const projects: Project[] = [
     description: 'A fully-featured high-conversion electronic equipment e-commerce store. Built using WordPress, Elementor Pro, and customized WooCommerce checkout engines to optimize transaction pipelines.',
     category: 'E-Commerce',
     image: '/src/assets/images/project_ecommerce_1783579243039.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1472851294608-062f824d296e?auto=format&fit=crop&q=80&w=800&h=600',
     tags: ['WordPress', 'WooCommerce', 'Elementor Pro', 'Speed Optimization', 'Stripe Integration'],
     features: [
       'Customized cart, checkout, and thank-you funnels for maximum conversion',
@@ -115,6 +117,7 @@ export const projects: Project[] = [
     description: 'A luxurious business solutions portal built for a multinational agency. Features interactive customer booking forms, custom filterable portfolio galleries, and responsive visual layout structures.',
     category: 'WordPress',
     image: '/src/assets/images/project_corporate_1783579261421.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800&h=600',
     tags: ['WordPress', 'Elementor', 'Theme Customization', 'Multilingual (WPML)', 'SEO'],
     features: [
       'Custom Elementor widgets designed specifically for corporate identity',
@@ -133,6 +136,7 @@ export const projects: Project[] = [
     description: 'An incredibly modern, fast-loading visual landing page designed to capture marketing leads. Developed entirely in custom semantic markup, utilizing beautiful Tailwind grids and dynamic scroll-triggered transitions.',
     category: 'Front-End',
     image: '/src/assets/images/project_landing_1783579283962.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800&h=600',
     tags: ['HTML5', 'Tailwind CSS', 'JavaScript', 'Framer Motion', 'Figma to Code'],
     features: [
       '100% pixel-perfect conversion from Figma design asset layout',
@@ -151,6 +155,7 @@ export const projects: Project[] = [
     description: 'A multi-provider directory and appointment scheduling solution built for clinics and individual doctors. Connects users with nearby physicians and handles real-time time-slot reservations.',
     category: 'WordPress',
     image: '/src/assets/images/project_booking_1783579305567.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1504813184591-015578994472?auto=format&fit=crop&q=80&w=800&h=600',
     tags: ['WordPress', 'JetEngine', 'Elementor', 'Custom Post Types', 'Booking Systems'],
     features: [
       'Custom Post Types (CPT) and Custom Taxonomies for specialty grouping',

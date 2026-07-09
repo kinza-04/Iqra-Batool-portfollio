@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Briefcase, Eye, ArrowUpRight, Tag } from 'lucide-react';
 import { Project } from '../types';
 import { projects } from '../data';
+import SafeImage from './SafeImage';
 
 interface PortfolioProps {
   onSelectProject: (project: Project) => void;
@@ -98,10 +99,10 @@ export default function Portfolio({ onSelectProject }: PortfolioProps) {
                 <div>
                   {/* Thumbnail Cover Area */}
                   <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-950">
-                    <img
+                    <SafeImage
                       src={project.image}
+                      fallbackSrc={project.fallbackImage || 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800&h=600'}
                       alt={project.title}
-                      referrerPolicy="no-referrer"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                     />
                     

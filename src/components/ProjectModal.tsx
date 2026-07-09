@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { X, Calendar, User, Clock, ExternalLink, MessageSquare, Check, Tag } from 'lucide-react';
 import { Project } from '../types';
 import { personalInfo } from '../data';
+import SafeImage from './SafeImage';
 
 interface ProjectModalProps {
   project: Project | null;
@@ -49,10 +50,10 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           {/* Left Column: Visual Mockup Showcase */}
           <div className="md:col-span-6 space-y-4">
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-800 bg-slate-950 group">
-              <img
+              <SafeImage
                 src={project.image}
+                fallbackSrc={project.fallbackImage || 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800&h=600'}
                 alt={project.title}
-                referrerPolicy="no-referrer"
                 className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/30 to-transparent" />
